@@ -10,4 +10,12 @@ const interval = setInterval( function(){
     const seconds = Math.floor((distance % (1000 * 60 )) / 1000 );
 
     counter = document.getElementById("launch");
+
+    if (distance > 0 ){
+
+        counter.innerHTML = `${days} dias, ${hours} horas, ${minutes} minutos, ${seconds} segundos`
+    }
+    else{
+        counter.innerHTML = "Volvemos pronto";
+    }
 }, 1000);
